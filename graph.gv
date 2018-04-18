@@ -1,0 +1,17 @@
+// Graph
+digraph {
+	S -> ST [constraint=true]
+	S -> "S-0" [constraint=true]
+	ST -> aST [constraint=true]
+	aST -> va [constraint=true]
+	aST -> "=" [constraint=true]
+	aST -> arEXP [constraint=true]
+	aST -> ";" [constraint=true]
+	va -> var [constraint=true]
+	va -> array [constraint=true]
+	arEXP -> term [constraint=true]
+	arEXP -> "arEXP'" [constraint=true]
+	term -> factor [constraint=true]
+	term -> "term'" [constraint=true]
+	factor -> num [constraint=true]
+}
