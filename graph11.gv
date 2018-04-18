@@ -1,0 +1,23 @@
+// Graph
+digraph {
+	"S(0)" -> "ST(1)" [constraint=true]
+	"S(0)" -> "S(2)" [constraint=true]
+	"ST(1)" -> "ifST(3)" [constraint=true]
+	"ifST(3)" -> "if(4)" [constraint=true]
+	"ifST(3)" -> "((5)" [constraint=true]
+	"ifST(3)" -> "rlEXP(6)" [constraint=true]
+	"ifST(3)" -> ")(7)" [constraint=true]
+	"ifST(3)" -> "block(8)" [constraint=true]
+	"ifST(3)" -> "else(9)" [constraint=true]
+	"ifST(3)" -> "block(10)" [constraint=true]
+	"rlEXP(6)" -> "rlEXP2(11)" [constraint=true]
+	"rlEXP(6)" -> "rlEXP'(12)" [constraint=true]
+	"rlEXP2(11)" -> "arEXP(13)" [constraint=true]
+	"arEXP(13)" -> "term(14)" [constraint=true]
+	"arEXP(13)" -> "arEXP'(15)" [constraint=true]
+	"term(14)" -> "factor(16)" [constraint=true]
+	"term(14)" -> "term'(17)" [constraint=true]
+	"factor(16)" -> "va(18)" [constraint=true]
+	"va(18)" -> "var(19)" [constraint=true]
+	"va(18)" -> "array(20)" [constraint=true]
+}

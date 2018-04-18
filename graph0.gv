@@ -1,0 +1,5 @@
+// Graph
+digraph {
+	"S(0)" -> "ST(1)" [constraint=true]
+	"S(0)" -> "S(2)" [constraint=true]
+}
