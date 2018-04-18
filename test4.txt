@@ -1,0 +1,27 @@
+input : for(k=3;j<4;k=k+1){if(j<3){k=4;}else{m=5;}}
+
+
+
+          ┌Node: [S]
+ Node: [S]┤
+          └Node: [ST]┐
+                     │           ┌Node: [;]
+                     │           ├Node: [=]
+                     │           │          ┌Node: [array]
+                     │           ├Node: [va]┤
+                     │           │          └Node: [var]
+                     └Node: [aST]┤
+                                 │                          ┌Node: [term']
+                                 │             ┌Node: [term]┤
+                                 │             │            └Node: [factor]┐
+                                 │             │                           │          ┌Node: [array]
+                                 │             │                           └Node: [va]┤
+                                 │             │                                      └Node: [var]
+                                 └Node: [arEXP]┤
+                                               │              ┌Node: [arEXP']
+                                               │              ├Node: [+]
+                                               └Node: [arEXP']┤
+                                                              │            ┌Node: [term']
+                                                              └Node: [term]┤
+                                                                           └Node: [factor]┐
+                                                                                          └Node: [num]

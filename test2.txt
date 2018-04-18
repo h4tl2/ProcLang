@@ -1,0 +1,27 @@
+input : if(x<5){ k=-3;} else { if(j<3) else {m=3;}}
+
+
+
+          ┌Node: [S]
+ Node: [S]┤
+          └Node: [ST]┐
+                     │           ┌Node: [;]
+                     │           ├Node: [=]
+                     │           │          ┌Node: [array]
+                     │           ├Node: [va]┤
+                     │           │          └Node: [var]
+                     └Node: [aST]┤
+                                 │                          ┌Node: [term']
+                                 │             ┌Node: [term]┤
+                                 │             │            └Node: [factor]┐
+                                 │             │                           │          ┌Node: [array]
+                                 │             │                           └Node: [va]┤
+                                 │             │                                      └Node: [var]
+                                 └Node: [arEXP]┤
+                                               │              ┌Node: [arEXP']
+                                               │              ├Node: [+]
+                                               └Node: [arEXP']┤
+                                                              │            ┌Node: [term']
+                                                              └Node: [term]┤
+                                                                           └Node: [factor]┐
+                                                                                          └Node: [num]

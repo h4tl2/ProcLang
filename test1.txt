@@ -1,0 +1,27 @@
+input : forex=a[2][3]+b[5]*g+xyz*arr[1][2][3][4][5];
+
+
+
+          ┌Node: [S]
+ Node: [S]┤
+          └Node: [ST]┐
+                     │           ┌Node: [;]
+                     │           ├Node: [=]
+                     │           │          ┌Node: [array]
+                     │           ├Node: [va]┤
+                     │           │          └Node: [var]
+                     └Node: [aST]┤
+                                 │                          ┌Node: [term']
+                                 │             ┌Node: [term]┤
+                                 │             │            └Node: [factor]┐
+                                 │             │                           │          ┌Node: [array]
+                                 │             │                           └Node: [va]┤
+                                 │             │                                      └Node: [var]
+                                 └Node: [arEXP]┤
+                                               │              ┌Node: [arEXP']
+                                               │              ├Node: [+]
+                                               └Node: [arEXP']┤
+                                                              │            ┌Node: [term']
+                                                              └Node: [term]┤
+                                                                           └Node: [factor]┐
+                                                                                          └Node: [num]
