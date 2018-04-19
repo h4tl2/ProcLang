@@ -2,3 +2,147 @@ input : for(for(x=1;x<10;x=x+1){k=3;};x<10;x=x+1){y=y+1;}
 
 
 
+          ┌Node: [S]
+ Node: [S]┤
+          └Node: [ST]┐
+                     │             ┌Node: [)]
+                     │             ├Node: [;]
+                     │             ├Node: [;]
+                     │             ├Node: [(]
+                     │             ├Node: [for]
+                     │             │            ┌Node: [=]
+                     │             │            │          ┌Node: [array]
+                     │             │            ├Node: [va]┤
+                     │             │            │          └Node: [var]
+                     │             ├Node: [aST2]┤
+                     │             │            │                          ┌Node: [term']
+                     │             │            │             ┌Node: [term]┤
+                     │             │            │             │            └Node: [factor]┐
+                     │             │            │             │                           │          ┌Node: [array]
+                     │             │            │             │                           └Node: [va]┤
+                     │             │            │             │                                      └Node: [var]
+                     │             │            └Node: [arEXP]┤
+                     │             │                          │              ┌Node: [arEXP']
+                     │             │                          │              ├Node: [+]
+                     │             │                          └Node: [arEXP']┤
+                     │             │                                         │            ┌Node: [term']
+                     │             │                                         └Node: [term]┤
+                     │             │                                                      └Node: [factor]┐
+                     │             │                                                                     └Node: [num]
+                     │             │             ┌Node: [rlEXP2]┐
+                     │             │             │              │             ┌Node: [arEXP']
+                     │             │             │              └Node: [arEXP]┤
+                     │             │             │                            │            ┌Node: [term']
+                     │             │             │                            └Node: [term]┤
+                     │             │             │                                         └Node: [factor]┐
+                     │             │             │                                                        │          ┌Node: [array]
+                     │             │             │                                                        └Node: [va]┤
+                     │             │             │                                                                   └Node: [var]
+                     │             ├Node: [rlEXP]┤
+                     │             │             │              ┌Node: [OP]┐
+                     │             │             │              │          └Node: [<]
+                     │             │             └Node: [rlEXP']┤
+                     │             │                            └Node: [rlEXP2]┐
+                     │             │                                           │             ┌Node: [arEXP']
+                     │             │                                           └Node: [arEXP]┤
+                     │             │                                                         │            ┌Node: [term']
+                     │             │                                                         └Node: [term]┤
+                     │             │                                                                      └Node: [factor]┐
+                     │             │                                                                                     └Node: [num]
+                     │             │             ┌Node: [}]
+                     │             │             ├Node: [{]
+                     │             ├Node: [block]┤
+                     │             │             └Node: [ST]┐
+                     │             │                        │           ┌Node: [;]
+                     │             │                        │           ├Node: [=]
+                     │             │                        │           │          ┌Node: [array]
+                     │             │                        │           ├Node: [va]┤
+                     │             │                        │           │          └Node: [var]
+                     │             │                        └Node: [aST]┤
+                     │             │                                    │                          ┌Node: [term']
+                     │             │                                    │             ┌Node: [term]┤
+                     │             │                                    │             │            └Node: [factor]┐
+                     │             │                                    │             │                           │          ┌Node: [array]
+                     │             │                                    │             │                           └Node: [va]┤
+                     │             │                                    │             │                                      └Node: [var]
+                     │             │                                    └Node: [arEXP]┤
+                     │             │                                                  │              ┌Node: [arEXP']
+                     │             │                                                  │              ├Node: [+]
+                     │             │                                                  └Node: [arEXP']┤
+                     │             │                                                                 │            ┌Node: [term']
+                     │             │                                                                 └Node: [term]┤
+                     │             │                                                                              └Node: [factor]┐
+                     │             │                                                                                             └Node: [num]
+                     └Node: [forST]┤
+                                   │            ┌Node: [)]
+                                   │            ├Node: [;]
+                                   │            ├Node: [;]
+                                   │            ├Node: [(]
+                                   │            ├Node: [for]
+                                   │            │            ┌Node: [=]
+                                   │            │            │          ┌Node: [array]
+                                   │            │            ├Node: [va]┤
+                                   │            │            │          └Node: [var]
+                                   │            ├Node: [aST2]┤
+                                   │            │            │             ┌Node: [arEXP']
+                                   │            │            └Node: [arEXP]┤
+                                   │            │                          │            ┌Node: [term']
+                                   │            │                          └Node: [term]┤
+                                   │            │                                       └Node: [factor]┐
+                                   │            │                                                      └Node: [num]
+                                   │            │             ┌Node: [}]
+                                   │            │             ├Node: [{]
+                                   │            ├Node: [block]┤
+                                   │            │             └Node: [ST]┐
+                                   │            │                        │           ┌Node: [;]
+                                   │            │                        │           ├Node: [=]
+                                   │            │                        │           │          ┌Node: [array]
+                                   │            │                        │           ├Node: [va]┤
+                                   │            │                        │           │          └Node: [var]
+                                   │            │                        └Node: [aST]┤
+                                   │            │                                    │             ┌Node: [arEXP']
+                                   │            │                                    └Node: [arEXP]┤
+                                   │            │                                                  │            ┌Node: [term']
+                                   │            │                                                  └Node: [term]┤
+                                   │            │                                                               └Node: [factor]┐
+                                   │            │                                                                              └Node: [num]
+                                   └Node: [aST2]┤
+                                                │             ┌Node: [rlEXP2]┐
+                                                │             │              │             ┌Node: [arEXP']
+                                                │             │              └Node: [arEXP]┤
+                                                │             │                            │            ┌Node: [term']
+                                                │             │                            └Node: [term]┤
+                                                │             │                                         └Node: [factor]┐
+                                                │             │                                                        │          ┌Node: [array]
+                                                │             │                                                        └Node: [va]┤
+                                                │             │                                                                   └Node: [var]
+                                                ├Node: [rlEXP]┤
+                                                │             │              ┌Node: [OP]┐
+                                                │             │              │          └Node: [<]
+                                                │             └Node: [rlEXP']┤
+                                                │                            └Node: [rlEXP2]┐
+                                                │                                           │             ┌Node: [arEXP']
+                                                │                                           └Node: [arEXP]┤
+                                                │                                                         │            ┌Node: [term']
+                                                │                                                         └Node: [term]┤
+                                                │                                                                      └Node: [factor]┐
+                                                │                                                                                     └Node: [num]
+                                                │            ┌Node: [=]
+                                                │            │          ┌Node: [array]
+                                                │            ├Node: [va]┤
+                                                │            │          └Node: [var]
+                                                └Node: [aST2]┤
+                                                             │                          ┌Node: [term']
+                                                             │             ┌Node: [term]┤
+                                                             │             │            └Node: [factor]┐
+                                                             │             │                           │          ┌Node: [array]
+                                                             │             │                           └Node: [va]┤
+                                                             │             │                                      └Node: [var]
+                                                             └Node: [arEXP]┤
+                                                                           │              ┌Node: [arEXP']
+                                                                           │              ├Node: [+]
+                                                                           └Node: [arEXP']┤
+                                                                                          │            ┌Node: [term']
+                                                                                          └Node: [term]┤
+                                                                                                       └Node: [factor]┐
+                                                                                                                      └Node: [num]
