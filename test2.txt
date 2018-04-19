@@ -1,4 +1,4 @@
-input : if(x<5){ k=-3;} else { if(j<3) else {m=3;}}
+input : if(x<5){ k=-3;} else { if(j<3) {k=4;} else {m=3;}}
 
 
 
@@ -51,10 +51,25 @@ input : if(x<5){ k=-3;} else { if(j<3) else {m=3;}}
                                   └Node: [block]┤
                                                 └Node: [ST]┐
                                                            │            ┌Node: [else]
-                                                           │            ├Node: [block]
                                                            │            ├Node: [)]
                                                            │            ├Node: [(]
                                                            │            ├Node: [if]
+                                                           │            │             ┌Node: [}]
+                                                           │            │             ├Node: [{]
+                                                           │            ├Node: [block]┤
+                                                           │            │             └Node: [ST]┐
+                                                           │            │                        │           ┌Node: [;]
+                                                           │            │                        │           ├Node: [=]
+                                                           │            │                        │           │          ┌Node: [array]
+                                                           │            │                        │           ├Node: [va]┤
+                                                           │            │                        │           │          └Node: [var]
+                                                           │            │                        └Node: [aST]┤
+                                                           │            │                                    │             ┌Node: [arEXP']
+                                                           │            │                                    └Node: [arEXP]┤
+                                                           │            │                                                  │            ┌Node: [term']
+                                                           │            │                                                  └Node: [term]┤
+                                                           │            │                                                               └Node: [factor]┐
+                                                           │            │                                                                              └Node: [num]
                                                            └Node: [ifST]┤
                                                                         │             ┌Node: [rlEXP2]┐
                                                                         │             │              │             ┌Node: [arEXP']
